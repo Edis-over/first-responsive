@@ -1,3 +1,41 @@
-
+* {
+  background-color: #161616;
+  box-sizing: border-box;
+}
+* body nav {
+  background-color: #c05817;
+  border-radius: 10px 10px 0 0;
+  padding: 0px;
+  margin: 0px;
+}
+* body nav img {
+  height: 40px;
+  background: none;
+}
+* body nav ul {
+  background-color: none;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+* body nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+* body header {
+  text-align: center;
+  justify-content: center;
+  background-color: red;
+}
+* body header p {
+  color: gray;
+}
+* body main .slide img {
+  width: 100%;
+}
+* body .bottom-flex img {
+  height: 200px;
+}
 
 /*# sourceMappingURL=styles.css.map */
