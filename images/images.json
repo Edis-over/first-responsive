@@ -1,0 +1,35 @@
+{
+    "bottom-flex-images":[{
+    "name":"desert",
+    "url":"https://images.pexels.com/photos/998646/pexels-photo-998646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"waterfall",
+    "url":"https://images.pexels.com/photos/3608619/pexels-photo-3608619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"forest",
+    "url":"https://images.pexels.com/photos/158251/forest-the-sun-morning-tucholskie-158251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"lake",
+    "url":"https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"mountain",
+    "url":"https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"sea",
+    "url":"https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"sky",
+    "url":"https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+},
+{
+    "name":"countryside",
+    "url":"https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+}
+]
+}
