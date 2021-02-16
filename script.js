@@ -3,6 +3,7 @@ fetch(
   "https://raw.githubusercontent.com/Edis-over/first-responsive/main/images/images.json"
 )
   .then((response) => response.json())
+  .then((data) => {})
   .then((data) => {
     const arraySelect = data.bottomFlexImages;
     let allImages = "";

@@ -1,10 +1,40 @@
 {
-    "topSlide":{
-        "name":"surf",
-        "url":"https://images.pexels.com/photos/998646/pexels-photo-998646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"surf"
-        
+
+    "topSlide":[{
+        "name":"mountain1",
+        "url":"https://images.pexels.com/photos/689451/pexels-photo-689451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"mountain"
     },
+    {
+        "name":"mountain2",
+        "url":"https://images.pexels.com/photos/1169107/pexels-photo-1169107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"mountain"
+    },
+    {
+        "name":"forest",
+        "url":"https://images.pexels.com/photos/3051895/pexels-photo-3051895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"forest with fir trees"
+    }],
+    "midContainer":{
+        "name":"surf",
+        "url":"https://images.pexels.com/photos/2968974/pexels-photo-2968974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"surf"
+    },
+    "bottomSlide":[{
+        "name":"sand",
+        "url":"https://images.pexels.com/photos/2931286/pexels-photo-2931286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"sand"
+    },
+    {
+        "name":"dolphin",
+        "url":"https://images.pexels.com/photos/5319953/pexels-photo-5319953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"dolphin"
+    },
+    {
+        "name":"lake2",
+        "url":"https://images.pexels.com/photos/383610/pexels-photo-383610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"lake"
+    }],
     "bottomFlexImages":[{
         "name":"desert",
         "url":"https://images.pexels.com/photos/998646/pexels-photo-998646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
