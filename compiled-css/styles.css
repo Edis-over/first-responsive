@@ -86,13 +86,13 @@
 * body header p {
   align-items: center;
 }
-* body main .slide {
+* body main .top-slide {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   overflow: hidden;
 }
-* body main .slide img {
+* body main .top-slide img {
   width: 100%;
 }
 * body main .mid-container {
@@ -122,6 +122,8 @@
 
 .display-none {
   display: none;
+  animation-name: hide;
+  animation-duration: 1s;
 }
 
 /*# sourceMappingURL=styles.css.map */

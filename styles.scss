@@ -97,7 +97,7 @@ $white-color: white;
       }
     }
     main {
-      .slide {
+      .top-slide {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -136,4 +136,6 @@ $white-color: white;
 
 .display-none {
   display: none;
+  animation-name: hide;
+  animation-duration: 1s;
 }
