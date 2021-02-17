@@ -4,6 +4,12 @@
   margin: 0px;
   padding: 0px;
 }
+* body {
+  background-color: #383838;
+}
+* body .container-fluid {
+  max-width: 1920px;
+}
 * body .container-fluid .row .top-banner {
   background-color: #c05817;
   height: 70px;
@@ -96,7 +102,8 @@
   width: 100%;
 }
 * body main .mid-container {
-  height: 100px;
+  height: 300px;
+  max-width: 1920px;
 }
 * body main .bottom-flex {
   display: flex;

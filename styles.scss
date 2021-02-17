@@ -7,7 +7,9 @@ $white-color: white;
   margin: 0px;
   padding: 0px;
   body {
+    background-color: rgb(56, 56, 56);
     .container-fluid {
+      max-width: 1920px;
       .row {
         .top-banner {
           background-color: $orange-color;
@@ -107,7 +109,8 @@ $white-color: white;
         }
       }
       .mid-container {
-        height: 100px;
+        height: 300px;
+        max-width: 1920px;
       }
       .bottom-flex {
         display: flex;
