@@ -25,11 +25,19 @@ fetch(
       for (element of arraySelect) {
         let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
         allImages += itemsToBeAdded;
-        console.log(allImages);
       }
       document.querySelector(".top-slide").innerHTML = allImages;
     })();
-    (injectMidContainerImage = () => {})();
+    (injectMidContainerImage = () => {
+      const arraySelect = data.midContainer;
+      let allImages = "";
+      for (element of arraySelect) {
+        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+        allImages += itemsToBeAdded;
+        console.log(allImages);
+      }
+      document.querySelector(".mid-container-image").innerHTML = allImages;
+    })();
     (injectBottomSliderImages = () => {})();
     (createBotFLex = () => {
       const arraySelect = data.bottomFlexImages;
