@@ -104,11 +104,15 @@ $white-color: white;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow: hidden;
-        img {
-          width: fit-content;
-          height: auto;
-          padding: 0px;
-          object-fit: contain;
+        .slide-show {
+          .slideDiv {
+            img {
+              width: fit-content;
+              height: auto;
+              padding: 0px;
+              object-fit: cover;
+            }
+          }
         }
       }
       .mid-container {
@@ -159,4 +163,3 @@ $white-color: white;
   animation-name: hide;
   animation-duration: 1s;
 }
-

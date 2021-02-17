@@ -23,13 +23,12 @@ fetch(
       const arraySelect = data.topSlide;
       let allImages = "";
       for (element of arraySelect) {
-        let itemsToBeAdded = `<div class="mySlide${element.id}">
+        let itemsToBeAdded = `<div class="mySlide${element.id} slideDiv">
         <img src="${element.url}" alt="${element.alt}">
         </div>`;
         allImages += itemsToBeAdded;
-        console.log(element);
       }
-      document.querySelector(".top-slide").innerHTML = allImages;
+      document.querySelector(".slide-show").innerHTML = allImages;
     })();
 
     (injectMidContainerImage = () => {

@@ -98,11 +98,11 @@
   flex-wrap: nowrap;
   overflow: hidden;
 }
-* body main .top-slide img {
+* body main .top-slide .slide-show .slideDiv img {
   width: fit-content;
   height: auto;
   padding: 0px;
-  object-fit: contain;
+  object-fit: cover;
 }
 * body main .mid-container {
   display: flex;
