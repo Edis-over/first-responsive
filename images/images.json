@@ -19,7 +19,10 @@
         "alt":"forest with fir trees"
     }],
     "midContainer":[{
+<<<<<<< HEAD
         "id":1,
+=======
+>>>>>>> 2187fd499f8269c4907899a5e00133037ae8dbc2
         "name":"surf",
         "url":"https://images.pexels.com/photos/2968974/pexels-photo-2968974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"surf"

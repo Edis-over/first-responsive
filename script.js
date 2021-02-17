@@ -27,17 +27,24 @@ fetch(
         <img src="${element.url}" alt="${element.alt}">
         </div>`;
         allImages += itemsToBeAdded;
+<<<<<<< HEAD
         console.log(element);
       }
       document.querySelector(".top-slide").innerHTML = allImages;
     })();
 
+=======
+      }
+      document.querySelector(".top-slide").innerHTML = allImages;
+    })();
+>>>>>>> 2187fd499f8269c4907899a5e00133037ae8dbc2
     (injectMidContainerImage = () => {
       const arraySelect = data.midContainer;
       let allImages = "";
       for (element of arraySelect) {
         let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
         allImages += itemsToBeAdded;
+<<<<<<< HEAD
       }
       document.querySelector(".mid-container-image").innerHTML = allImages;
     })();
@@ -52,6 +59,13 @@ fetch(
       document.querySelector(".bottom-slide-images").innerHTML = allImages;
     })();
 
+=======
+        console.log(allImages);
+      }
+      document.querySelector(".mid-container-image").innerHTML = allImages;
+    })();
+    (injectBottomSliderImages = () => {})();
+>>>>>>> 2187fd499f8269c4907899a5e00133037ae8dbc2
     (createBotFLex = () => {
       const arraySelect = data.bottomFlexImages;
       let allImages = "";
