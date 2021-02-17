@@ -14,9 +14,9 @@
     },
     {
         "id":3,
-        "name":"forest",
-        "url":"https://images.pexels.com/photos/3051895/pexels-photo-3051895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"forest with fir trees"
+        "name":"wave",
+        "url":"https://images.pexels.com/photos/1870259/pexels-photo-1870259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"waves"
     }],
     "midContainer":[{
         "id":1,
