@@ -5,14 +5,20 @@
   padding: 0px;
 }
 * body {
+  box-sizing: border-box;
   background-color: #383838;
 }
 * body .container-fluid {
+  margin: 0px;
+  padding: 0px;
   max-width: 1920px;
+}
+* body .container-fluid .row {
+  margin: 0px;
 }
 * body .container-fluid .row .top-banner {
   background-color: #c05817;
-  height: 70px;
+  height: 7vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -27,7 +33,6 @@
   height: 60px;
   width: 65px;
   background-color: #c05817;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -47,7 +52,7 @@
   background-color: white;
 }
 * body .container-fluid .drop-menu-visibility {
-  height: 70px;
+  height: 8vh;
   background-color: #c05817;
   list-style: none;
   animation-name: visible;
@@ -88,21 +93,41 @@
   justify-content: center;
   align-items: center;
   color: white;
+  height: 5vh;
 }
 * body header p {
   align-items: center;
 }
 * body main .top-slide {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow: hidden;
+  position: relative;
+  align-items: center;
 }
-* body main .top-slide .slide-show .slideDiv img {
-  width: fit-content;
+* body main .top-slide .slide-show {
+  display: flex;
+  overflow: hidden;
   height: auto;
   padding: 0px;
-  object-fit: cover;
+  width: 100%;
+}
+* body main .top-slide .btn1 {
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: white;
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+}
+* body main .top-slide .btn2 {
+  position: absolute;
+  position: absolute;
+  right: 0px;
+  width: auto;
+  height: auto;
+  color: white;
+  font-size: 3em;
+  background-color: transparent;
+  border: none;
 }
 * body main .mid-container {
   display: flex;
@@ -115,6 +140,18 @@
 * body main .mid-container .mid-container-image img {
   height: 200px;
   width: 200px;
+}
+* body main .bottom-slide {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+* body main .bottom-slide .bottom-slide-images {
+  padding: 0px;
+}
+* body main .bottom-slide .bottom-slide-images img {
+  object-fit: cover;
 }
 * body main .bottom-flex {
   display: flex;

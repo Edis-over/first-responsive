@@ -23,9 +23,7 @@ fetch(
       const arraySelect = data.topSlide;
       let allImages = "";
       for (element of arraySelect) {
-        let itemsToBeAdded = `<div class="mySlide${element.id} slideDiv">
-        <img src="${element.url}" alt="${element.alt}">
-        </div>`;
+        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}" class="img-fluid">`;
         allImages += itemsToBeAdded;
       }
       document.querySelector(".slide-show").innerHTML = allImages;
@@ -45,7 +43,9 @@ fetch(
       const arraySelect = data.bottomSlide;
       let allImages = "";
       for (element of arraySelect) {
-        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+        let itemsToBeAdded = `<div class="mySlide${element.id} slideDiv">
+        <img src="${element.url}" alt="${element.alt}" class="img-fluid">
+        </div>`;
         allImages += itemsToBeAdded;
       }
       document.querySelector(".bottom-slide-images").innerHTML = allImages;

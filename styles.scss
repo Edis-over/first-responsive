@@ -7,13 +7,18 @@ $white-color: white;
   margin: 0px;
   padding: 0px;
   body {
+    box-sizing: border-box;
     background-color: rgb(56, 56, 56);
     .container-fluid {
+      margin: 0px;
+      padding: 0px;
       max-width: 1920px;
+
       .row {
+        margin: 0px;
         .top-banner {
           background-color: $orange-color;
-          height: 70px;
+          height: 7vh;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
@@ -28,7 +33,6 @@ $white-color: white;
             height: 60px;
             width: 65px;
             background-color: $orange-color;
-            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -50,7 +54,7 @@ $white-color: white;
         }
       }
       .drop-menu-visibility {
-        height: 70px;
+        height: 8vh;
         background-color: $orange-color;
         list-style: none;
         animation-name: visible;
@@ -94,25 +98,43 @@ $white-color: white;
       justify-content: center;
       align-items: center;
       color: $white-color;
+      height: 5vh;
       p {
         align-items: center;
       }
     }
     main {
       .top-slide {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow: hidden;
+        position: relative;
+        align-items: center;
         .slide-show {
-          .slideDiv {
-            img {
-              width: fit-content;
-              height: auto;
-              padding: 0px;
-              object-fit: cover;
-            }
+          display: flex;
+          overflow: hidden;
+          height: auto;
+          padding: 0px;
+          width: 100%;
+          img {
           }
+        }
+        .btn1 {
+          position: absolute;
+          width: auto;
+          height: auto;
+          color: $white-color;
+          font-size: 3rem;
+          background-color: transparent;
+          border: none;
+        }
+        .btn2 {
+          position: absolute;
+          position: absolute;
+          right: 0px;
+          width: auto;
+          height: auto;
+          color: $white-color;
+          font-size: 3em;
+          background-color: transparent;
+          border: none;
         }
       }
       .mid-container {
@@ -128,8 +150,14 @@ $white-color: white;
         }
       }
       .bottom-slide {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: hidden;
         .bottom-slide-images {
+          padding: 0px;
           img {
+            object-fit: cover;
           }
         }
       }
