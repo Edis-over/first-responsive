@@ -23,14 +23,35 @@ fetch(
       const arraySelect = data.topSlide;
       let allImages = "";
       for (element of arraySelect) {
-        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+        let itemsToBeAdded = `<div class="mySlide${element.id}">
+        <img src="${element.url}" alt="${element.alt}">
+        </div>`;
         allImages += itemsToBeAdded;
-        console.log(allImages);
+        console.log(element);
       }
       document.querySelector(".top-slide").innerHTML = allImages;
     })();
-    (injectMidContainerImage = () => {})();
-    (injectBottomSliderImages = () => {})();
+
+    (injectMidContainerImage = () => {
+      const arraySelect = data.midContainer;
+      let allImages = "";
+      for (element of arraySelect) {
+        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+        allImages += itemsToBeAdded;
+      }
+      document.querySelector(".mid-container-image").innerHTML = allImages;
+    })();
+
+    (injectBottomSliderImages = () => {
+      const arraySelect = data.bottomSlide;
+      let allImages = "";
+      for (element of arraySelect) {
+        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+        allImages += itemsToBeAdded;
+      }
+      document.querySelector(".bottom-slide-images").innerHTML = allImages;
+    })();
+
     (createBotFLex = () => {
       const arraySelect = data.bottomFlexImages;
       let allImages = "";

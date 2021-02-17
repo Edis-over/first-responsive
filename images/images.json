@@ -1,77 +1,92 @@
 {
 
     "topSlide":[{
+        "id":1,
         "name":"mountain1",
         "url":"https://images.pexels.com/photos/689451/pexels-photo-689451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"mountain"
     },
     {
+        "id":2,
         "name":"mountain2",
         "url":"https://images.pexels.com/photos/1169107/pexels-photo-1169107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"mountain"
     },
     {
+        "id":3,
         "name":"forest",
         "url":"https://images.pexels.com/photos/3051895/pexels-photo-3051895.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"forest with fir trees"
     }],
-    "midContainer":{
+    "midContainer":[{
+        "id":1,
         "name":"surf",
         "url":"https://images.pexels.com/photos/2968974/pexels-photo-2968974.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"surf"
-    },
+    }],
     "bottomSlide":[{
+        "id":1,
         "name":"sand",
         "url":"https://images.pexels.com/photos/2931286/pexels-photo-2931286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"sand"
     },
     {
+        "id":2,
         "name":"dolphin",
         "url":"https://images.pexels.com/photos/5319953/pexels-photo-5319953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"dolphin"
     },
     {
+        "id":3,
         "name":"lake2",
         "url":"https://images.pexels.com/photos/383610/pexels-photo-383610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"lake"
     }],
     "bottomFlexImages":[{
+        "id":1,
         "name":"desert",
         "url":"https://images.pexels.com/photos/998646/pexels-photo-998646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"desert"
         
     },
     {
+        "id":2 ,
         "name":"waterfall",
         "url":"https://images.pexels.com/photos/3608619/pexels-photo-3608619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"waterfall"
     },
     {
+        "id":3,
         "name":"forest",
         "url":"https://images.pexels.com/photos/158251/forest-the-sun-morning-tucholskie-158251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"forest"
     },
     {
+        "id":4,
         "name":"lake",
         "url":"https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"lake"
     },
     {
+        "id":5,
         "name":"mountain",
         "url":"https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"mountain"
     },
     {
+        "id":6,
         "name":"sea",
         "url":"https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"sea"
     },
     {
+        "id":7,
         "name":"sky",
         "url":"https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"sky"
     },
     {
+        "id":8,
         "name":"countryside",
         "url":"https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"countryside"

@@ -99,11 +99,22 @@
   overflow: hidden;
 }
 * body main .top-slide img {
-  width: 100%;
+  width: fit-content;
+  height: auto;
+  padding: 0px;
+  object-fit: contain;
 }
 * body main .mid-container {
-  height: 300px;
-  max-width: 1920px;
+  display: flex;
+  height: 400px;
+}
+* body main .mid-container .mid-container-image {
+  height: 100%;
+  width: 100%;
+}
+* body main .mid-container .mid-container-image img {
+  height: 200px;
+  width: 200px;
 }
 * body main .bottom-flex {
   display: flex;

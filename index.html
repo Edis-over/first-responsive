@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./compiled-css/styles.css" />
     <script src="node_modules/jquery/dist/jquery.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -38,11 +44,9 @@
         </header>
       </div>
       <main>
-        <div class="row top-slide">
-          
-        </div>
+        <div class="row top-slide"></div>
         <div class="row mid-container">
-          <div class="col">
+          <div class="offset-1 col-4">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
               sequi suscipit nam nemo quo necessitatibus doloribus dolores
@@ -50,9 +54,10 @@
               possimus repellendus earum commodi.
             </p>
           </div>
-          <div class="col">
-
-          </div>
+          <div class="offset-1 col-4 mid-container-image"></div>
+        </div>
+        <div class="row bottom-slide">
+          <div class="bottom-slide-images"></div>
         </div>
         <div class="row bottom-flex"></div>
       </main>
