@@ -23,10 +23,10 @@ fetch(
       const arraySelect = data.topSlide;
       let allImages = "";
       for (element of arraySelect) {
-        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}" class="img-fluid">`;
+        let itemsToBeAdded = `<div class="top-slide-images"><img src="${element.url}" alt="${element.alt}" class="img-fluid top-slide-img"></div>`;
         allImages += itemsToBeAdded;
       }
-      document.querySelector(".slide-show").innerHTML = allImages;
+      document.querySelector(".top-slide-show").innerHTML = allImages;
     })();
 
     (injectMidContainerImage = () => {
@@ -51,7 +51,7 @@ fetch(
       document.querySelector(".bottom-slide-images").innerHTML = allImages;
     })();
 
-    (createBotFLex = () => {
+    (injectBotFlexImages = () => {
       const arraySelect = data.bottomFlexImages;
       let allImages = "";
       for (const element of arraySelect) {
@@ -64,15 +64,45 @@ fetch(
     })();
   });
 
-// Too much code, does same shit
-// const bottomFlex = document.querySelector(".bottom-flex");
-//       const createDiv = document.createElement("div");
-//       createDiv.classList.add("col-lg-3", "col-md-4", "col-sm-6", "col-xs-12");
-//       const createA = document.createElement("a");
-//       const createImg = document.createElement("img");
-//       createImg.src = data.bottomFlexImages[i].url;
-//       let appendImgA = createA.appendChild(createImg);
-//       let appendDivImgA = createDiv.appendChild(createA);
-//       bottomFlex.appendChild(createDiv);
+//Top Slide Show
+const btnBack = document.querySelector(".btn1");
+const btnNext = document.querySelector(".btn2");
+const topSlideShow = document.querySelector(".top-slide-show");
+let slidePosition = 0;
 
-//
+updateSlidePosition = () => {
+  const topSlides = document.getElementsByClassName("top-slide-images");
+  for (i = 0; i < topSlides.length; i++) {
+    if (i === slidePosition) {
+      topSlides[i].style.visibility = "visible";
+    } else {
+      topSlides[i].style.display = "none";
+    }
+  }
+  topSlides[slidePosition].style.display = "block";
+};
+
+moveToNextSlide = () => {
+  const numberOfSlides = topSlideShow.childElementCount;
+  if (slidePosition === numberOfSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+  updateSlidePosition();
+};
+modeToPrevSlide = () => {
+  const numberOfSlides = topSlideShow.childElementCount;
+  if (slidePosition === 0) {
+    slidePosition = numberOfSlides - 1;
+  } else {
+    slidePosition--;
+  }
+  updateSlidePosition();
+};
+btnBack.addEventListener("click", function () {
+  moveToNextSlide();
+});
+btnNext.addEventListener("click", function () {
+  modeToPrevSlide();
+});
