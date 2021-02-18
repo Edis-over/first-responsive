@@ -14,9 +14,9 @@
     },
     {
         "id":3,
-        "name":"wave",
-        "url":"https://images.pexels.com/photos/1870259/pexels-photo-1870259.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"waves"
+        "name":"mountain3",
+        "url":"https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"mountain"
     }],
     "midContainer":[{
         "id":1,
