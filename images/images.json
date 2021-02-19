@@ -2,9 +2,9 @@
 
     "topSlide":[{
         "id":1,
-        "name":"mountain1",
-        "url":"https://images.pexels.com/photos/689451/pexels-photo-689451.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"mountain"
+        "name":"forest",
+        "url":"https://images.pexels.com/photos/1529881/pexels-photo-1529881.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
+        "alt":"forest"
     },
     {
         "id":2,
@@ -44,50 +44,50 @@
     }],
     "bottomFlexImages":[{
         "id":1,
-        "name":"desert",
+        "name":"Desert",
         "url":"https://images.pexels.com/photos/998646/pexels-photo-998646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"desert"
         
     },
     {
         "id":2 ,
-        "name":"waterfall",
+        "name":"Waterfalls",
         "url":"https://images.pexels.com/photos/3608619/pexels-photo-3608619.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"waterfall"
     },
     {
         "id":3,
-        "name":"forest",
+        "name":"Forests",
         "url":"https://images.pexels.com/photos/158251/forest-the-sun-morning-tucholskie-158251.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"forest"
     },
     {
         "id":4,
-        "name":"lake",
+        "name":"Lakes",
         "url":"https://images.pexels.com/photos/2166711/pexels-photo-2166711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"lake"
     },
     {
         "id":5,
-        "name":"mountain",
+        "name":"Mountains",
         "url":"https://images.pexels.com/photos/2387876/pexels-photo-2387876.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"mountain"
     },
     {
         "id":6,
-        "name":"sea",
+        "name":"Sea Side",
         "url":"https://images.pexels.com/photos/533923/pexels-photo-533923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"sea"
     },
     {
         "id":7,
-        "name":"sky",
+        "name":"The Sky",
         "url":"https://images.pexels.com/photos/2325446/pexels-photo-2325446.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"sky"
     },
     {
         "id":8,
-        "name":"countryside",
+        "name":"Countrysides",
         "url":"https://images.pexels.com/photos/842711/pexels-photo-842711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"countryside"
     }

@@ -45,7 +45,7 @@ class ImportImages {
       this.injectMidContainerImage();
       this.injectBottomSliderImages();
       this.injectBotFlexImages();
-    }, 200);
+    }, 300);
   }
   getJson = () => {
     fetch(this.url)
@@ -66,7 +66,7 @@ class ImportImages {
       <img src="${element.url}" alt="${element.alt}" class="img-fluid top-slide-img"></div>`;
       allImages += itemsToBeAdded;
     });
-    this.topSlideShowClass.innerHTML = allImages;
+    this.topSlideShowClass.innerHTML += allImages;
   };
 
   injectMidContainerImage = () => {
@@ -96,7 +96,10 @@ class ImportImages {
     let allImages = "";
     arraySelect.forEach((element) => {
       let itemsToBeAdded = `<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-        <a href="#"> <img src="${element.url}" alt="${element.alt}"></img></a>
+      
+        <a href="#"> 
+        <div>${element.name}</div>
+        <img src="${element.url}" alt="${element.alt}"></a>
         </div>`;
       allImages += itemsToBeAdded;
     });
@@ -133,7 +136,7 @@ class SlideShow {
       thisObj.moveToNextSlide();
     });
   }
-  updateSlidePosition = () => {
+  updateSlidePosition() {
     for (let i = 0; i < this.selectClass.length; i++) {
       if (i === this.slidePosition) {
         this.selectClass[i].style.visibility = "visible";
@@ -142,9 +145,9 @@ class SlideShow {
       }
     }
     this.selectClass[this.slidePosition].style.display = "block";
-  };
+  }
 
-  moveToPrevSlide = () => {
+  moveToPrevSlide() {
     const numberOfSlides = this.slideShow.childElementCount;
     if (this.slidePosition === 0) {
       this.slidePosition = numberOfSlides - 1;
@@ -152,8 +155,8 @@ class SlideShow {
       this.slidePosition--;
     }
     this.updateSlidePosition();
-  };
-  moveToNextSlide = () => {
+  }
+  moveToNextSlide() {
     const numberOfSlides = this.slideShow.childElementCount;
     if (this.slidePosition === numberOfSlides - 1) {
       this.slidePosition = 0;
@@ -161,7 +164,7 @@ class SlideShow {
       this.slidePosition++;
     }
     this.updateSlidePosition();
-  };
+  }
 }
 //slide template : ( prev button , next button, div which contains slides, div which contains imgs )
 const slideShowTop = new SlideShow(
@@ -176,3 +179,71 @@ const slideShowBot = new SlideShow(
   document.querySelector(".bottom-slide-show"),
   document.getElementsByClassName("bottom-slide-images")
 );
+
+class Overlay {
+  domHook;
+  whichElement;
+  elementClass;
+  innerElement;
+
+  constructor(domHook, whichElement, elementClass, innerElement) {
+    this.domHook = document.querySelector(domHook);
+    this.whichElement = whichElement;
+    this.elementClass = elementClass;
+    this.innerElement = innerElement;
+    this.createElement();
+  }
+  createElement() {
+    const newElement = document.createElement(this.whichElement);
+    newElement.className += this.elementClass;
+    newElement.innerHTML += this.innerElement;
+    this.domHook.appendChild(newElement);
+  }
+}
+const topSlideOverlayDiv = new Overlay(
+  ".top-slide",
+  "div",
+  "top-slider-div container",
+  ""
+);
+
+const topSlideOverlayTitle = new Overlay(
+  ".top-slider-div",
+  "h1",
+  "top-slider-div-title row",
+  "VACATION SURVIVAL 101,<br>DON'T LET BOREDOM CREEP IN"
+);
+const topSlideOverlaySubTitleDiv = new Overlay(
+  ".top-slider-div",
+  "div",
+  "top-slider-div-div row",
+  ""
+);
+
+const topSlideOverlaySubTitleDivDiva = new Overlay(
+  ".top-slider-div-div",
+  "div",
+  "top-slider-div-div-a",
+  ""
+);
+const topSlideOverlaySubTitleDivDivb = new Overlay(
+  ".top-slider-div-div",
+  "div",
+  "top-slider-div-div-b",
+  ""
+);
+const topSlideOverlaySubTitle = new Overlay(
+  ".top-slider-div-div",
+  "h2",
+  "top-slider-div-subtitle",
+  "JOHN DOE"
+);
+
+const topSlideOverlayBtn = new Overlay(
+  ".top-slider-div",
+  "button",
+  "top-slider-div-btn row",
+  "Read More"
+);
+
+const bottomSlideDiv = new Overlay(".bottom-slide-show", "div", "", "");
