@@ -1,108 +1,178 @@
 // //burger menu open/close
 class Burger {
-  constructor() {
-    this.dropMenu = document.querySelector(".drop-menu-visibility");
+  dropMenu;
+  burgerBtn;
+  constructor(getDiv) {
+    this.dropMenu = document.querySelector(getDiv);
+    this.burgerBtn = document.querySelector(".burger");
+    this.burgerBtn.addEventListener("click", function () {
+      burgerMenu.toggleMenu();
+    });
   }
   toggleMenu() {
     this.dropMenu.classList.toggle("display-none");
   }
 }
-const burgerMenu = new Burger();
-const burgerBtn = document.querySelector(".burger");
-burgerBtn.addEventListener("click", function () {
-  burgerMenu.toggleMenu();
-});
+const burgerMenu = new Burger(".drop-menu-visibility");
 
-// GET images for :top-slide, mid-container, bot-slide,bot-flex
-fetch(
-  "https://raw.githubusercontent.com/Edis-over/first-responsive/main/images/images.json"
-)
-  .then((response) => response.json())
-  .then((data) => {
-    (injectTopSliderImages = () => {
-      const arraySelect = data.topSlide;
-      let allImages = "";
-      for (element of arraySelect) {
-        let itemsToBeAdded = `<div class="top-slide-images"><img src="${element.url}" alt="${element.alt}" class="img-fluid top-slide-img"></div>`;
-        allImages += itemsToBeAdded;
-      }
-      document.querySelector(".top-slide-show").innerHTML = allImages;
-    })();
+//importing images to dom from JSON
+class ImportImages {
+  url;
+  topSlideShowClass;
+  midContainerClass;
+  bottomSliderClass;
+  bottomFlexClass;
+  topSlideArray = [];
+  midContainerArray = [];
+  bottomSliderArray = [];
+  bottomFlexArray = [];
 
-    (injectMidContainerImage = () => {
-      const arraySelect = data.midContainer;
-      let allImages = "";
-      for (element of arraySelect) {
-        let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
-        allImages += itemsToBeAdded;
-      }
-      document.querySelector(".mid-container-image").innerHTML = allImages;
-    })();
+  constructor(
+    url,
+    topSlideShowClass,
+    midContainerClass,
+    bottomSliderClass,
+    bottomFlexClass
+  ) {
+    this.url = url;
+    this.topSlideShowClass = document.querySelector(topSlideShowClass);
+    this.midContainerClass = document.querySelector(midContainerClass);
+    this.bottomSliderClass = document.querySelector(bottomSliderClass);
+    this.bottomFlexClass = document.querySelector(bottomFlexClass);
+    this.getJson();
+    setTimeout(() => {
+      this.injectTopSliderImages();
+      this.injectMidContainerImage();
+      this.injectBottomSliderImages();
+      this.injectBotFlexImages();
+    }, 200);
+  }
+  getJson = () => {
+    fetch(this.url)
+      .then((response) => response.json())
+      .then((data) => {
+        this.topSlideArray = data.topSlide;
+        this.midContainerArray = data.midContainer;
+        this.bottomSliderArray = data.bottomSlide;
+        this.bottomFlexArray = data.bottomFlexImages;
+      });
+  };
+  injectTopSliderImages = () => {
+    const arraySelect = this.topSlideArray;
+    let allImages = "";
+    // for (element of arraySelect)
+    arraySelect.forEach((element) => {
+      let itemsToBeAdded = `<div class="top-slide-images">
+      <img src="${element.url}" alt="${element.alt}" class="img-fluid top-slide-img"></div>`;
+      allImages += itemsToBeAdded;
+    });
+    this.topSlideShowClass.innerHTML = allImages;
+  };
 
-    (injectBottomSliderImages = () => {
-      const arraySelect = data.bottomSlide;
-      let allImages = "";
-      for (element of arraySelect) {
-        let itemsToBeAdded = `<div class="mySlide${element.id} slideDiv">
-        <img src="${element.url}" alt="${element.alt}" class="img-fluid">
-        </div>`;
-        allImages += itemsToBeAdded;
-      }
-      document.querySelector(".bottom-slide-images").innerHTML = allImages;
-    })();
+  injectMidContainerImage = () => {
+    const arraySelect = this.midContainerArray;
+    let allImages = "";
+    arraySelect.forEach((element) => {
+      let itemsToBeAdded = `<img src="${element.url}" alt="${element.alt}">`;
+      allImages += itemsToBeAdded;
+    });
+    this.midContainerClass.innerHTML = allImages;
+  };
 
-    (injectBotFlexImages = () => {
-      const arraySelect = data.bottomFlexImages;
-      let allImages = "";
-      for (const element of arraySelect) {
-        let itemsToBeAdded = `<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-    <a href="#"> <img src="${element.url}" alt="${element.alt}"></img></a>
+  injectBottomSliderImages = () => {
+    const arraySelect = this.bottomSliderArray;
+    let allImages = "";
+    arraySelect.forEach((element) => {
+      let itemsToBeAdded = `<div class="bottom-slide-images">
+    <img src="${element.url}" alt="${element.alt}" class="img-fluid">
     </div>`;
-        allImages += itemsToBeAdded;
-      }
-      document.querySelector(".bottom-flex").innerHTML = allImages;
-    })();
-  });
+      allImages += itemsToBeAdded;
+    });
+    this.bottomSliderClass.innerHTML = allImages;
+  };
+
+  injectBotFlexImages = () => {
+    const arraySelect = this.bottomFlexArray;
+    let allImages = "";
+    arraySelect.forEach((element) => {
+      let itemsToBeAdded = `<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+        <a href="#"> <img src="${element.url}" alt="${element.alt}"></img></a>
+        </div>`;
+      allImages += itemsToBeAdded;
+    });
+    this.bottomFlexClass.innerHTML = allImages;
+  };
+}
+const addImagesToPage = new ImportImages(
+  "https://raw.githubusercontent.com/Edis-over/first-responsive/main/images/images.json",
+  ".top-slide-show",
+  ".mid-container-image",
+  ".bottom-slide-show",
+  ".bottom-flex"
+);
 
 //Top Slide Show
-const btnBack = document.querySelector(".btn1");
-const btnNext = document.querySelector(".btn2");
-const topSlideShow = document.querySelector(".top-slide-show");
-let slidePosition = 0;
 
-updateSlidePosition = () => {
-  const topSlides = document.getElementsByClassName("top-slide-images");
-  for (i = 0; i < topSlides.length; i++) {
-    if (i === slidePosition) {
-      topSlides[i].style.visibility = "visible";
-    } else {
-      topSlides[i].style.display = "none";
+class SlideShow {
+  btnBack;
+  btnNext;
+  slideShow;
+  slidePosition = 0;
+  selectClass;
+  constructor(btnBack, btnNext, slideShow, selectClass) {
+    this.btnBack = btnBack;
+    this.btnNext = btnNext;
+    this.slideShow = slideShow;
+    this.slidePosition = 0;
+    this.selectClass = selectClass;
+    const thisObj = this;
+    this.btnBack.addEventListener("click", function () {
+      thisObj.moveToPrevSlide();
+    });
+    this.btnNext.addEventListener("click", function () {
+      thisObj.moveToNextSlide();
+    });
+  }
+  updateSlidePosition = () => {
+    for (let i = 0; i < this.selectClass.length; i++) {
+      if (i === this.slidePosition) {
+        this.selectClass[i].style.visibility = "visible";
+      } else {
+        this.selectClass[i].style.display = "none";
+      }
     }
-  }
-  topSlides[slidePosition].style.display = "block";
-};
+    this.selectClass[this.slidePosition].style.display = "block";
+  };
 
-moveToNextSlide = () => {
-  const numberOfSlides = topSlideShow.childElementCount;
-  if (slidePosition === numberOfSlides - 1) {
-    slidePosition = 0;
-  } else {
-    slidePosition++;
-  }
-  updateSlidePosition();
-};
-modeToPrevSlide = () => {
-  const numberOfSlides = topSlideShow.childElementCount;
-  if (slidePosition === 0) {
-    slidePosition = numberOfSlides - 1;
-  } else {
-    slidePosition--;
-  }
-  updateSlidePosition();
-};
-btnBack.addEventListener("click", function () {
-  moveToNextSlide();
-});
-btnNext.addEventListener("click", function () {
-  modeToPrevSlide();
-});
+  moveToPrevSlide = () => {
+    const numberOfSlides = this.slideShow.childElementCount;
+    if (this.slidePosition === 0) {
+      this.slidePosition = numberOfSlides - 1;
+    } else {
+      this.slidePosition--;
+    }
+    this.updateSlidePosition();
+  };
+  moveToNextSlide = () => {
+    const numberOfSlides = this.slideShow.childElementCount;
+    if (this.slidePosition === numberOfSlides - 1) {
+      this.slidePosition = 0;
+    } else {
+      this.slidePosition++;
+    }
+    this.updateSlidePosition();
+  };
+}
+//slide template : ( prev button , next button, div which contains slides, div which contains imgs )
+const slideShowTop = new SlideShow(
+  document.querySelector(".btn1"),
+  document.querySelector(".btn2"),
+  document.querySelector(".top-slide-show"),
+  document.getElementsByClassName("top-slide-images")
+);
+const slideShowBot = new SlideShow(
+  document.querySelector(".btn1-bot"),
+  document.querySelector(".btn2-bot"),
+  document.querySelector(".bottom-slide-show"),
+  document.getElementsByClassName("bottom-slide-images")
+);

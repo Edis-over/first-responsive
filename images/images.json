@@ -26,20 +26,20 @@
     }],
     "bottomSlide":[{
         "id":1,
-        "name":"sand",
-        "url":"https://images.pexels.com/photos/2931286/pexels-photo-2931286.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"sand"
+        "name":"resort",
+        "url":"https://images.pexels.com/photos/4177476/pexels-photo-4177476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "alt":"seaside resort"
     },
     {
         "id":2,
-        "name":"dolphin",
-        "url":"https://images.pexels.com/photos/5319953/pexels-photo-5319953.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"dolphin"
+        "name":"mountain",
+        "url":"https://images.pexels.com/photos/773202/pexels-photo-773202.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "alt":"mountain"
     },
     {
         "id":3,
         "name":"lake2",
-        "url":"https://images.pexels.com/photos/383610/pexels-photo-383610.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "url":"https://images.pexels.com/photos/149681/pexels-photo-149681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"lake"
     }],
     "bottomFlexImages":[{

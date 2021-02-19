@@ -7,6 +7,7 @@ $white-color: white;
   margin: 0px;
   padding: 0px;
   body {
+    margin: auto;
     box-sizing: border-box;
     background-color: rgb(56, 56, 56);
     .container-fluid {
@@ -85,6 +86,7 @@ $white-color: white;
           li {
             background-color: $orange-color;
             a {
+              background-color: $orange-color;
               text-decoration: none;
               color: $white-color;
               font-size: 30px;
@@ -114,7 +116,7 @@ $white-color: white;
           .top-slide-images {
             display: none;
             overflow: hidden;
-            height: auto;
+            height: 800px;
             padding: 0px;
             width: 100%;
             &:nth-child(1) {
@@ -137,7 +139,6 @@ $white-color: white;
         }
         .btn2 {
           position: absolute;
-          position: absolute;
           right: 0px;
           width: auto;
           height: auto;
@@ -149,25 +150,78 @@ $white-color: white;
       }
       .mid-container {
         width: 100%;
-        display: flex;
-        height: 400px;
-        .mid-container-image {
-          img {
-            height: 200px;
-            width: 200px;
+        height: 600px;
+        .container {
+          align-items: center;
+          display: flex;
+          padding: 100px;
+          justify-content: space-evenly;
+          border: 2px solid $orange-color;
+          .text-div {
+            h1 {
+              color: $orange-color;
+              font-size: 20px;
+            }
+            h2 {
+              color: $white-color;
+            }
+            p {
+              color: $white-color;
+            }
+            button {
+              color: $white-color;
+              border-color: $orange-color;
+              padding: 10px;
+            }
+          }
+          .mid-container-image {
+            padding: 0px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
       .bottom-slide {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        .bottom-slide-images {
+        position: relative;
+        align-items: center;
+        .bottom-slide-show {
           padding: 0px;
-          img {
-            object-fit: cover;
+          width: 100%;
+          height: 400px;
+          .bottom-slide-images {
+            display: none;
+            overflow: hidden;
+            height: 800px;
+            padding: 0px;
+            width: 100%;
+            &:nth-child(1) {
+              display: block;
+              img {
+                object-fit: cover;
+              }
+            }
           }
+        }
+        .btn1-bot {
+          position: absolute;
+          width: auto;
+          height: auto;
+          color: $white-color;
+          font-size: 3rem;
+          background-color: transparent;
+          border: none;
+        }
+        .btn2-bot {
+          position: absolute;
+          right: 0px;
+          width: auto;
+          height: auto;
+          color: $white-color;
+          font-size: 3em;
+          background-color: transparent;
+          border: none;
         }
       }
       .bottom-flex {
