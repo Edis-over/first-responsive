@@ -1,45 +1,46 @@
 $orange-color: #c05817;
 $black-gray-color: #161616;
 $white-color: white;
-$h2FontSize: 20px;
+$h2FontSize: 1.25rem;
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 * {
   background-color: $black-gray-color;
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", sans-serif;
   body {
     margin: auto;
-    box-sizing: border-box;
     background-color: rgb(56, 56, 56);
     .container-fluid {
-      margin: 0px;
-      padding: 0px;
-      max-width: 1920px;
-
+      margin: 0;
+      padding: 0;
+      max-width: 120rem;
       .row {
-        margin: 0px;
+        margin: 0;
         .top-banner {
+          padding: 5px 0;
           background-color: $orange-color;
-          height: 7vh;
+          height: 100%;
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
 
           img {
-            min-height: 20px;
-            max-height: 60px;
+            height: 40px;
             background-color: $orange-color;
           }
           .burger {
-            height: 60px;
-            width: 65px;
+            height: 40px;
+            width: 45px;
             background-color: $orange-color;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
-            border: 2px solid white;
+            border: 0.125rem solid white;
+            border-radius: 10%;
             &:hover {
               background-color: $black-gray-color;
               cursor: pointer;
@@ -47,17 +48,16 @@ $h2FontSize: 20px;
             .line-1,
             .line-2,
             .line-3 {
-              margin: 0 5px;
-              width: 50px;
-              height: 8px;
+              width: 35px;
+              height: 0.3125rem;
               background-color: $white-color;
             }
           }
         }
       }
       .drop-menu-visibility {
-        height: 8vh;
-        background-color: $orange-color;
+        height: 40px;
+        background-color: $white-color;
         list-style: none;
         animation-name: visible;
         animation-duration: 1s;
@@ -65,7 +65,7 @@ $h2FontSize: 20px;
 
         @keyframes visible {
           0% {
-            height: 0px;
+            height: 0;
             opacity: 0;
           }
           100% {
@@ -75,142 +75,178 @@ $h2FontSize: 20px;
         }
 
         ul {
-          background-color: $orange-color;
+          background-color: inherit;
+          height: auto;
           width: 100%;
+          padding: 0;
           display: flex;
           flex: row;
           justify-content: space-evenly;
-          border-radius: 10px;
           list-style: none;
           align-items: center;
           margin: 0;
           li {
-            background-color: $orange-color;
+            background-color: inherit;
             a {
-              background-color: $orange-color;
+              background-color: inherit;
               text-decoration: none;
-              color: $white-color;
-              font-size: 30px;
+              color: $black-gray-color;
+              font-weight: 600;
+              font-size: 20px;
+              position: relative;
+
+              &::after {
+                content: "";
+                height: 2px;
+                width: 0;
+                display: block;
+                background-color: $orange-color;
+                position: absolute;
+                transition: all 0.2s ease-in-out;
+              }
+              &:hover {
+                &:after {
+                  width: 100%;
+                }
+              }
             }
           }
         }
-      }
-    }
-    header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $white-color;
-      height: 5vh;
-      p {
-        align-items: center;
       }
     }
     main {
       .top-slide {
         position: relative;
         align-items: center;
+        height: 100%;
         .top-slide-show {
-          padding: 0px;
+          padding: 0rem;
           width: 100%;
           height: 100%;
           .top-slide-images {
             display: none;
             overflow: hidden;
-            height: 800px;
-            padding: 0px;
+            height: 100%;
+            padding: 0;
             width: 100%;
             &:nth-child(1) {
               display: block;
-              img {
-                object-fit: cover;
-              }
             }
           }
         }
 
-        .btn1 {
-          position: absolute;
-          width: auto;
-          height: auto;
-          color: $white-color;
-          font-size: 3rem;
-          background-color: transparent;
-          border: none;
-        }
-        .btn2 {
-          position: absolute;
-          right: 0px;
-          width: auto;
-          height: auto;
-          color: $white-color;
-          font-size: 3em;
-          background-color: transparent;
-          border: none;
-        }
-        .top-slider-div {
+        .top-slider-floater {
           background-color: transparent;
           position: absolute;
           background-color: none;
           width: auto;
-          padding: 20px;
-          top: 40%;
+          padding: 1.25rem;
+          height: auto;
+          top: 30%;
           left: 6%;
           color: $white-color;
-          justify-content: start;
           h1 {
             background-color: transparent;
             font-size: 60px;
           }
-          .top-slider-div-div {
+          .top-slider-floater-row {
             background-color: transparent;
             display: flex;
             flex-direction: row;
             justify-content: start;
             align-items: baseline;
 
-            .top-slider-div-div-a {
+            .top-slider-floater-row-a {
               background-color: $orange-color;
-              height: 30px;
-              margin: 1px;
-              padding: 0px;
-              width: 10px;
+              height: 1.875rem;
+              margin: 0.0625rem;
+              padding: 0;
+              width: 0.625rem;
               transform: skew(-30deg);
             }
-            .top-slider-div-div-b {
+            .top-slider-floater-row-b {
               background-color: $orange-color;
-              height: 30px;
-              width: 10px;
-              margin: 10px;
-              padding: 0px;
+              height: 1.875rem;
+              width: 0.625rem;
+              margin: 0.625rem;
+              padding: 0;
               transform: skew(-30deg);
             }
-            .top-slider-div-subtitle {
+            .top-slider-floater-subtitle {
               background-color: transparent;
-              font-size: px;
+              font-size: auto;
               width: auto;
             }
           }
-          .top-slider-div-btn {
+          .top-slider-floater-btn {
             color: $white-color;
-            border: 2px solid $orange-color;
-            padding: 10px;
+            border: 0.125rem solid $orange-color;
+            padding: 0.625rem;
+          }
+          @media screen and(max-width:992px) {
+            h1 {
+              font-size: 45px;
+            }
+          }
+          @media screen and(max-width:768px) {
+            h1 {
+              font-size: 32px;
+            }
+          }
+        }
+        @media screen and(max-width:576px) {
+          .top-slide-show,
+          .btn1,
+          .btn2 {
+            display: none;
+          }
+          .top-slider-floater {
+            position: static;
+            text-align: center;
+            .top-slider-floater-row {
+              justify-content: center;
+            }
+            .top-slider-floater-btn {
+              width: auto;
+              margin: 0 auto;
+            }
           }
         }
       }
+
+      .btn1 {
+        position: absolute;
+        width: auto;
+        height: auto;
+        color: $white-color;
+        font-size: 2.5rem;
+        background-color: transparent;
+        border: none;
+      }
+      .btn2 {
+        position: absolute;
+        right: 0;
+        width: auto;
+        height: auto;
+        color: $white-color;
+        font-size: 2.5em;
+        background-color: transparent;
+        border: none;
+      }
+
       .mid-container {
         width: 100%;
         height: auto;
         .container {
           align-items: center;
           display: flex;
-          padding: 100px;
+          padding: 5%;
           justify-content: space-evenly;
-          border: 2px solid $orange-color;
+          border: 0.125rem solid $orange-color;
           .text-div {
             h3 {
               color: $orange-color;
-              font-size: 25px;
+              font-size: 1.5625rem;
             }
             h2 {
               color: $white-color;
@@ -221,36 +257,37 @@ $h2FontSize: 20px;
             button {
               color: $white-color;
               border-color: $orange-color;
-              padding: 10px;
+              padding: 0.625rem;
             }
           }
           .mid-container-image {
-            padding: 0px;
+            padding: 0;
             img {
               width: 100%;
               height: auto;
-              object-fit: cover;
             }
           }
         }
       }
       .bottom-slide {
+        height: auto;
+        width: 100%;
         position: relative;
         align-items: center;
         .bottom-slide-show {
-          padding: 0px;
+          padding: 0;
           width: 100%;
-          height: 600px;
+
           .bottom-slide-images {
             display: none;
             overflow: hidden;
-            height: 100%;
-            padding: 0px;
+            width: 100%;
+            padding: 0;
             width: 100%;
             &:nth-child(1) {
               display: block;
               img {
-                object-fit: cover;
+                height: auto;
                 width: 100%;
               }
             }
@@ -267,7 +304,7 @@ $h2FontSize: 20px;
         }
         .btn2-bot {
           position: absolute;
-          right: 0px;
+          right: 0;
           width: auto;
           height: auto;
           color: $white-color;
@@ -277,19 +314,19 @@ $h2FontSize: 20px;
         }
       }
       .bottom-container {
-        margin: 30px 0;
-        border: 2px solid $orange-color;
+        margin: 1.875rem 0;
+        border: 0.125rem solid $orange-color;
         text-align: center;
         h2 {
           font-size: $h2FontSize;
           color: $white-color;
-          padding: 40px;
+          padding: 2.5rem;
         }
       }
       .bottom-flex {
         display: flex;
         div {
-          max-height: 400px;
+          max-height: 25rem;
           padding: 0;
           position: relative;
           a {
@@ -298,7 +335,7 @@ $h2FontSize: 20px;
             text-align: center;
             div {
               position: absolute;
-              font-size: 30px;
+              font-size: 1.875rem;
               color: $white-color;
               background-color: transparent;
               z-index: 2;
@@ -309,7 +346,7 @@ $h2FontSize: 20px;
             img {
               height: 100%;
               width: 100%;
-              padding: 0px;
+              padding: 0;
               object-fit: cover;
               z-index: 1;
               filter: grayscale(100%);
@@ -325,7 +362,7 @@ $h2FontSize: 20px;
           background-color: $orange-color;
           color: $white-color;
           text-align: center;
-          padding: 25px;
+          padding: 1.5625rem;
         }
       }
     }

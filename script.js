@@ -55,12 +55,14 @@ class ImportImages {
         this.midContainerArray = data.midContainer;
         this.bottomSliderArray = data.bottomSlide;
         this.bottomFlexArray = data.bottomFlexImages;
+      })
+      .catch((error) => {
+        alert.error("Error:", error);
       });
   };
   injectTopSliderImages = () => {
     const arraySelect = this.topSlideArray;
     let allImages = "";
-    // for (element of arraySelect)
     arraySelect.forEach((element) => {
       let itemsToBeAdded = `<div class="top-slide-images">
       <img src="${element.url}" alt="${element.alt}" class="img-fluid top-slide-img"></div>`;
@@ -114,7 +116,7 @@ const addImagesToPage = new ImportImages(
   ".bottom-flex"
 );
 
-//Top Slide Show
+//Slide Show
 
 class SlideShow {
   btnBack;
@@ -203,47 +205,51 @@ class Overlay {
 const topSlideOverlayDiv = new Overlay(
   ".top-slide",
   "div",
-  "top-slider-div container",
+  "top-slider-floater container",
   ""
 );
 
 const topSlideOverlayTitle = new Overlay(
-  ".top-slider-div",
+  ".top-slider-floater ",
   "h1",
-  "top-slider-div-title row",
+  "top-slider-floater-title row",
   "VACATION SURVIVAL 101,<br>DON'T LET BOREDOM CREEP IN"
 );
+
 const topSlideOverlaySubTitleDiv = new Overlay(
-  ".top-slider-div",
+  ".top-slider-floater",
   "div",
-  "top-slider-div-div row",
+  "top-slider-floater-row row",
   ""
 );
 
 const topSlideOverlaySubTitleDivDiva = new Overlay(
-  ".top-slider-div-div",
+  ".top-slider-floater-row",
   "div",
-  "top-slider-div-div-a",
+  "top-slider-floater-row-a",
   ""
 );
 const topSlideOverlaySubTitleDivDivb = new Overlay(
-  ".top-slider-div-div",
+  ".top-slider-floater-row",
   "div",
-  "top-slider-div-div-b",
+  "top-slider-floater-row-b",
   ""
 );
 const topSlideOverlaySubTitle = new Overlay(
-  ".top-slider-div-div",
+  ".top-slider-floater-row",
   "h2",
-  "top-slider-div-subtitle",
+  "top-slider-floater-subtitle",
   "JOHN DOE"
 );
 
 const topSlideOverlayBtn = new Overlay(
-  ".top-slider-div",
+  ".top-slider-floater",
   "button",
-  "top-slider-div-btn row",
+  "top-slider-floater-btn row",
   "Read More"
 );
 
 const bottomSlideDiv = new Overlay(".bottom-slide-show", "div", "", "");
+
+
+

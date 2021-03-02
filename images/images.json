@@ -15,7 +15,7 @@
     {
         "id":3,
         "name":"mountain3",
-        "url":"https://images.pexels.com/photos/763097/pexels-photo-763097.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        "url":"https://images.pexels.com/photos/4504068/pexels-photo-4504068.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
         "alt":"mountain"
     }],
     "midContainer":[{
@@ -26,21 +26,21 @@
     }],
     "bottomSlide":[{
         "id":1,
-        "name":"resort",
-        "url":"https://images.pexels.com/photos/4177476/pexels-photo-4177476.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"seaside resort"
+        "name":"bridge",
+        "url":"https://images.pexels.com/photos/2918468/pexels-photo-2918468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt":"twisting bridge"
     },
     {
         "id":2,
-        "name":"aurora",
-        "url":"https://images.pexels.com/photos/4344436/pexels-photo-4344436.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"aurora"
+        "name":"jetplanes",
+        "url":"https://images.pexels.com/photos/2921540/pexels-photo-2921540.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt":"jet plains smoke trail"
     },
     {
         "id":3,
-        "name":"lake2",
-        "url":"https://images.pexels.com/photos/149681/pexels-photo-149681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
-        "alt":"lake"
+        "name":"empty road",
+        "url":"https://images.pexels.com/photos/1169116/pexels-photo-1169116.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt":"empty road"
     }],
     "bottomFlexImages":[{
         "id":1,
